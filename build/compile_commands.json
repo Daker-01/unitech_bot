@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/Users/dalerimatsoev/TgBot/build",
+  "command": "/usr/bin/clang++ -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/Users/dalerimatsoev/TgBot/utils -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/telegram_schedule_bot.dir/main.cpp.o -c /Users/dalerimatsoev/TgBot/main.cpp",
+  "file": "/Users/dalerimatsoev/TgBot/main.cpp",
+  "output": "CMakeFiles/telegram_schedule_bot.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/dalerimatsoev/TgBot/build",
+  "command": "/usr/bin/clang++ -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/Users/dalerimatsoev/TgBot/utils -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.o -c /Users/dalerimatsoev/TgBot/utils/schedule_updater.cpp",
+  "file": "/Users/dalerimatsoev/TgBot/utils/schedule_updater.cpp",
+  "output": "CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.o"
+}
+]

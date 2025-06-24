@@ -1,0 +1,3 @@
+/Users/dalerimatsoev/TgBot/build/CMakeFiles/telegram_schedule_bot.dir
+/Users/dalerimatsoev/TgBot/build/CMakeFiles/edit_cache.dir
+/Users/dalerimatsoev/TgBot/build/CMakeFiles/rebuild_cache.dir
