@@ -12,6 +12,7 @@ std::unordered_map<int64_t, std::string> userGroups;
 std::unordered_map<int64_t, bool> waitingForGroup;
 std::vector<std::string> availableGroups;
 
+//данные из файла загружает в память на старте
 void loadUserGroups() {
     std::ifstream in("../data/users.json");
     if (in) {
@@ -20,14 +21,15 @@ void loadUserGroups() {
             userGroups[std::stoll(el.key())] = el.value();
     }
 }
-
+//изменение данных из памяти сохраняет в файл
 void saveUserGroups() {
     json j;
     for (auto& [id, group] : userGroups)
         j[std::to_string(id)] = group;
-    std::ofstream("../data/users.json") << j.dump(4);
+    std::ofstream("../data/users.json") << j.dump(4); //отступ 4 пробела
 }
 
+//актуальный список групп из файла загружает в память
 void loadAvailableGroups() {
     std::ifstream in("../data/groups.json");
     availableGroups.clear();
@@ -39,10 +41,12 @@ void loadAvailableGroups() {
     }
 }
 
+//проверка вводимой пользователем группы среди элементов вектора - существует/нет
 bool isGroupAvailable(const std::string& group) {
     return std::find(availableGroups.begin(), availableGroups.end(), group) != availableGroups.end();
 }
 
+//открытие файла с расписанием + форматирование данных json 
 std::string getScheduleForGroup(const std::string& group) {
     std::ifstream in("../data/schedule.json");
     if (!in.is_open()) return "Ошибка: файл расписания не найден.";
@@ -88,11 +92,31 @@ std::string getScheduleForGroup(const std::string& group) {
     return res;
 }
 
+//токен
+std::ifstream file("token.txt");
+std::string token;
+
+std::string loadToken() {
+    std::ifstream file("../token.txt");
+    std::string token;
+
+    if (!file || !std::getline(file, token) || token.empty()) {
+        std::cerr << "Ошибка: не удалось загрузить токен из файла или файл пустой\n";
+        return "";
+    }
+    return token;
+}
+
+//логика общения и обработка сообщений
 int main() {
     loadUserGroups();
     loadAvailableGroups();
-
-    TgBot::Bot bot("7324604886:AAEYZcPhKpnVzHburBsPicgd_Fjsz-MRedI");
+ 
+    std::string token = loadToken();
+    if (token.empty()) {
+        return 1;
+    }
+    TgBot::Bot bot(token);
 
     bot.getEvents().onAnyMessage([&](TgBot::Message::Ptr msg) {
         if (msg->text.empty()) return;
@@ -146,7 +170,7 @@ int main() {
                                     "/changegroup - Сменить группу");
         }
     });
-
+//цикл работы бота
     try {
         TgBot::TgLongPoll longPoll(bot);
         while (true) longPoll.start();
