@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named telegram_schedule_bot
+# Target rules for targets named pusk
 
 # Build rule for target.
-telegram_schedule_bot: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 telegram_schedule_bot
-.PHONY : telegram_schedule_bot
+pusk: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pusk
+.PHONY : pusk
 
 # fast build rule for target.
-telegram_schedule_bot/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/telegram_schedule_bot.dir/build.make CMakeFiles/telegram_schedule_bot.dir/build
-.PHONY : telegram_schedule_bot/fast
+pusk/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pusk.dir/build.make CMakeFiles/pusk.dir/build
+.PHONY : pusk/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/telegram_schedule_bot.dir/build.make CMakeFiles/telegram_schedule_bot.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pusk.dir/build.make CMakeFiles/pusk.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -142,7 +142,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/telegram_schedule_bot.dir/build.make CMakeFiles/telegram_schedule_bot.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pusk.dir/build.make CMakeFiles/pusk.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -150,7 +150,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/telegram_schedule_bot.dir/build.make CMakeFiles/telegram_schedule_bot.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pusk.dir/build.make CMakeFiles/pusk.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -161,7 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... telegram_schedule_bot"
+	@echo "... pusk"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /Users/dalerimatsoev/tgbot/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/telegram_schedule_bot.dir/all
+all: CMakeFiles/pusk.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/telegram_schedule_bot.dir/codegen
+codegen: CMakeFiles/pusk.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,40 +75,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/telegram_schedule_bot.dir/clean
+clean: CMakeFiles/pusk.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/telegram_schedule_bot.dir
+# Target rules for target CMakeFiles/pusk.dir
 
 # All Build rule for target.
-CMakeFiles/telegram_schedule_bot.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/telegram_schedule_bot.dir/build.make CMakeFiles/telegram_schedule_bot.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/telegram_schedule_bot.dir/build.make CMakeFiles/telegram_schedule_bot.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/dalerimatsoev/tgbot/build/CMakeFiles --progress-num=1,2 "Built target telegram_schedule_bot"
-.PHONY : CMakeFiles/telegram_schedule_bot.dir/all
+CMakeFiles/pusk.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pusk.dir/build.make CMakeFiles/pusk.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pusk.dir/build.make CMakeFiles/pusk.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/dalerimatsoev/tgbot/build/CMakeFiles --progress-num=1,2 "Built target pusk"
+.PHONY : CMakeFiles/pusk.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/telegram_schedule_bot.dir/rule: cmake_check_build_system
+CMakeFiles/pusk.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dalerimatsoev/tgbot/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/telegram_schedule_bot.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pusk.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dalerimatsoev/tgbot/build/CMakeFiles 0
-.PHONY : CMakeFiles/telegram_schedule_bot.dir/rule
+.PHONY : CMakeFiles/pusk.dir/rule
 
 # Convenience name for target.
-telegram_schedule_bot: CMakeFiles/telegram_schedule_bot.dir/rule
-.PHONY : telegram_schedule_bot
+pusk: CMakeFiles/pusk.dir/rule
+.PHONY : pusk
 
 # codegen rule for target.
-CMakeFiles/telegram_schedule_bot.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/telegram_schedule_bot.dir/build.make CMakeFiles/telegram_schedule_bot.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/dalerimatsoev/tgbot/build/CMakeFiles --progress-num=1,2 "Finished codegen for target telegram_schedule_bot"
-.PHONY : CMakeFiles/telegram_schedule_bot.dir/codegen
+CMakeFiles/pusk.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pusk.dir/build.make CMakeFiles/pusk.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/dalerimatsoev/tgbot/build/CMakeFiles --progress-num=1,2 "Finished codegen for target pusk"
+.PHONY : CMakeFiles/pusk.dir/codegen
 
 # clean rule for target.
-CMakeFiles/telegram_schedule_bot.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/telegram_schedule_bot.dir/build.make CMakeFiles/telegram_schedule_bot.dir/clean
-.PHONY : CMakeFiles/telegram_schedule_bot.dir/clean
+CMakeFiles/pusk.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pusk.dir/build.make CMakeFiles/pusk.dir/clean
+.PHONY : CMakeFiles/pusk.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
