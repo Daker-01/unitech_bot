@@ -57,10 +57,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/dalerimatsoev/TgBot
+CMAKE_SOURCE_DIR = /Users/dalerimatsoev/tgbot
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/dalerimatsoev/TgBot/build
+CMAKE_BINARY_DIR = /Users/dalerimatsoev/tgbot/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dalerimatsoev/TgBot/build/CMakeFiles /Users/dalerimatsoev/TgBot/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dalerimatsoev/tgbot/build/CMakeFiles /Users/dalerimatsoev/tgbot/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dalerimatsoev/TgBot/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dalerimatsoev/tgbot/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -153,30 +153,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/telegram_schedule_bot.dir/build.make CMakeFiles/telegram_schedule_bot.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-utils/schedule_updater.o: utils/schedule_updater.cpp.o
-.PHONY : utils/schedule_updater.o
-
-# target to build an object file
-utils/schedule_updater.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/telegram_schedule_bot.dir/build.make CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.o
-.PHONY : utils/schedule_updater.cpp.o
-
-utils/schedule_updater.i: utils/schedule_updater.cpp.i
-.PHONY : utils/schedule_updater.i
-
-# target to preprocess a source file
-utils/schedule_updater.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/telegram_schedule_bot.dir/build.make CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.i
-.PHONY : utils/schedule_updater.cpp.i
-
-utils/schedule_updater.s: utils/schedule_updater.cpp.s
-.PHONY : utils/schedule_updater.s
-
-# target to generate assembly for a file
-utils/schedule_updater.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/telegram_schedule_bot.dir/build.make CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.s
-.PHONY : utils/schedule_updater.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -189,9 +165,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... utils/schedule_updater.o"
-	@echo "... utils/schedule_updater.i"
-	@echo "... utils/schedule_updater.s"
 .PHONY : help
 
 

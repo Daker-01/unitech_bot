@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/dalerimatsoev/TgBot
+CMAKE_SOURCE_DIR = /Users/dalerimatsoev/tgbot
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/dalerimatsoev/TgBot/build
+CMAKE_BINARY_DIR = /Users/dalerimatsoev/tgbot/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/telegram_schedule_bot.dir/depend.make
@@ -73,54 +73,32 @@ CMakeFiles/telegram_schedule_bot.dir/codegen:
 .PHONY : CMakeFiles/telegram_schedule_bot.dir/codegen
 
 CMakeFiles/telegram_schedule_bot.dir/main.cpp.o: CMakeFiles/telegram_schedule_bot.dir/flags.make
-CMakeFiles/telegram_schedule_bot.dir/main.cpp.o: /Users/dalerimatsoev/TgBot/main.cpp
+CMakeFiles/telegram_schedule_bot.dir/main.cpp.o: /Users/dalerimatsoev/tgbot/main.cpp
 CMakeFiles/telegram_schedule_bot.dir/main.cpp.o: CMakeFiles/telegram_schedule_bot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dalerimatsoev/TgBot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/telegram_schedule_bot.dir/main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/telegram_schedule_bot.dir/main.cpp.o -MF CMakeFiles/telegram_schedule_bot.dir/main.cpp.o.d -o CMakeFiles/telegram_schedule_bot.dir/main.cpp.o -c /Users/dalerimatsoev/TgBot/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dalerimatsoev/tgbot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/telegram_schedule_bot.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/telegram_schedule_bot.dir/main.cpp.o -MF CMakeFiles/telegram_schedule_bot.dir/main.cpp.o.d -o CMakeFiles/telegram_schedule_bot.dir/main.cpp.o -c /Users/dalerimatsoev/tgbot/main.cpp
 
 CMakeFiles/telegram_schedule_bot.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/telegram_schedule_bot.dir/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dalerimatsoev/TgBot/main.cpp > CMakeFiles/telegram_schedule_bot.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dalerimatsoev/tgbot/main.cpp > CMakeFiles/telegram_schedule_bot.dir/main.cpp.i
 
 CMakeFiles/telegram_schedule_bot.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/telegram_schedule_bot.dir/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dalerimatsoev/TgBot/main.cpp -o CMakeFiles/telegram_schedule_bot.dir/main.cpp.s
-
-CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.o: CMakeFiles/telegram_schedule_bot.dir/flags.make
-CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.o: /Users/dalerimatsoev/TgBot/utils/schedule_updater.cpp
-CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.o: CMakeFiles/telegram_schedule_bot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dalerimatsoev/TgBot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.o -MF CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.o.d -o CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.o -c /Users/dalerimatsoev/TgBot/utils/schedule_updater.cpp
-
-CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dalerimatsoev/TgBot/utils/schedule_updater.cpp > CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.i
-
-CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dalerimatsoev/TgBot/utils/schedule_updater.cpp -o CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dalerimatsoev/tgbot/main.cpp -o CMakeFiles/telegram_schedule_bot.dir/main.cpp.s
 
 # Object files for target telegram_schedule_bot
 telegram_schedule_bot_OBJECTS = \
-"CMakeFiles/telegram_schedule_bot.dir/main.cpp.o" \
-"CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.o"
+"CMakeFiles/telegram_schedule_bot.dir/main.cpp.o"
 
 # External object files for target telegram_schedule_bot
 telegram_schedule_bot_EXTERNAL_OBJECTS =
 
 telegram_schedule_bot: CMakeFiles/telegram_schedule_bot.dir/main.cpp.o
-telegram_schedule_bot: CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.o
 telegram_schedule_bot: CMakeFiles/telegram_schedule_bot.dir/build.make
-telegram_schedule_bot: /usr/local/lib/libTgBot.a
-telegram_schedule_bot: /opt/homebrew/lib/libboost_system.dylib
-telegram_schedule_bot: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libcurl.tbd
-telegram_schedule_bot: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libcurl.tbd
-telegram_schedule_bot: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libz.tbd
-telegram_schedule_bot: /opt/homebrew/lib/libssl.dylib
-telegram_schedule_bot: /opt/homebrew/lib/libcrypto.dylib
-telegram_schedule_bot: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libcurl.tbd
+telegram_schedule_bot: /opt/homebrew/Cellar/openssl@3/3.5.0/lib/libssl.dylib
+telegram_schedule_bot: /opt/homebrew/Cellar/openssl@3/3.5.0/lib/libcrypto.dylib
 telegram_schedule_bot: CMakeFiles/telegram_schedule_bot.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/dalerimatsoev/TgBot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable telegram_schedule_bot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/dalerimatsoev/tgbot/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable telegram_schedule_bot"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/telegram_schedule_bot.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -132,6 +110,6 @@ CMakeFiles/telegram_schedule_bot.dir/clean:
 .PHONY : CMakeFiles/telegram_schedule_bot.dir/clean
 
 CMakeFiles/telegram_schedule_bot.dir/depend:
-	cd /Users/dalerimatsoev/TgBot/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/dalerimatsoev/TgBot /Users/dalerimatsoev/TgBot /Users/dalerimatsoev/TgBot/build /Users/dalerimatsoev/TgBot/build /Users/dalerimatsoev/TgBot/build/CMakeFiles/telegram_schedule_bot.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/dalerimatsoev/tgbot/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/dalerimatsoev/tgbot /Users/dalerimatsoev/tgbot /Users/dalerimatsoev/tgbot/build /Users/dalerimatsoev/tgbot/build /Users/dalerimatsoev/tgbot/build/CMakeFiles/telegram_schedule_bot.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/telegram_schedule_bot.dir/depend
 

@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/Users/dalerimatsoev/TgBot/build/cmake_install.cmake"
+		"/Users/dalerimatsoev/tgbot/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

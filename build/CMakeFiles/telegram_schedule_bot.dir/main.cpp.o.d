@@ -1,5 +1,5 @@
 CMakeFiles/telegram_schedule_bot.dir/main.cpp.o: \
-  /Users/dalerimatsoev/TgBot/main.cpp /usr/local/include/tgbot/tgbot.h \
+  /Users/dalerimatsoev/tgbot/main.cpp /usr/local/include/tgbot/tgbot.h \
   /usr/local/include/tgbot/Api.h /usr/local/include/tgbot/TgException.h \
   /usr/local/include/tgbot/export.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string \
@@ -2499,5 +2499,4 @@ CMakeFiles/telegram_schedule_bot.dir/main.cpp.o: \
   /opt/homebrew/include/nlohmann/detail/conversions/to_chars.hpp \
   /opt/homebrew/include/nlohmann/ordered_map.hpp \
   /opt/homebrew/include/nlohmann/detail/macro_unscope.hpp \
-  /opt/homebrew/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
-  /Users/dalerimatsoev/TgBot/utils/schedule_updater.h
+  /opt/homebrew/include/nlohmann/thirdparty/hedley/hedley_undef.hpp

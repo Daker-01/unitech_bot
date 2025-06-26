@@ -1,30 +1,19 @@
-cmake_minimum_required(VERSION 3.16)
-project(telegram_schedule_bot)
+cmake_minimum_required(VERSION 3.20)
+project(telegram_schedule_bot LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Boost REQUIRED COMPONENTS system)
-find_package(TgBot REQUIRED)
+find_package(OpenSSL REQUIRED)
+find_package(tgbot REQUIRED)
 find_package(nlohmann_json REQUIRED)
-find_package(CURL REQUIRED)
 
-add_executable(telegram_schedule_bot
-    main.cpp
-    utils/schedule_updater.cpp   # Указываем путь к новому файлу
-)
-
-target_include_directories(telegram_schedule_bot PRIVATE
-    utils                      # чтобы видеть schedule_updater.h
-)
+add_executable(telegram_schedule_bot main.cpp)
 
 target_link_libraries(telegram_schedule_bot
-    TgBot::TgBot
-    Boost::system
-    nlohmann_json::nlohmann_json
-    CURL::libcurl
-)
-find_package(CURL REQUIRED)
-
-target_link_libraries(telegram_schedule_bot
-    CURL::libcurl
+    PRIVATE
+        TgBot
+        nlohmann_json::nlohmann_json
+        OpenSSL::SSL
+        OpenSSL::Crypto
 )

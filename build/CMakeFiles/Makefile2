@@ -54,10 +54,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/dalerimatsoev/TgBot
+CMAKE_SOURCE_DIR = /Users/dalerimatsoev/tgbot
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/dalerimatsoev/TgBot/build
+CMAKE_BINARY_DIR = /Users/dalerimatsoev/tgbot/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -85,14 +85,14 @@ clean: CMakeFiles/telegram_schedule_bot.dir/clean
 CMakeFiles/telegram_schedule_bot.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/telegram_schedule_bot.dir/build.make CMakeFiles/telegram_schedule_bot.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/telegram_schedule_bot.dir/build.make CMakeFiles/telegram_schedule_bot.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/dalerimatsoev/TgBot/build/CMakeFiles --progress-num=1,2,3 "Built target telegram_schedule_bot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/dalerimatsoev/tgbot/build/CMakeFiles --progress-num=1,2 "Built target telegram_schedule_bot"
 .PHONY : CMakeFiles/telegram_schedule_bot.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/telegram_schedule_bot.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dalerimatsoev/TgBot/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dalerimatsoev/tgbot/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/telegram_schedule_bot.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dalerimatsoev/TgBot/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dalerimatsoev/tgbot/build/CMakeFiles 0
 .PHONY : CMakeFiles/telegram_schedule_bot.dir/rule
 
 # Convenience name for target.
@@ -102,7 +102,7 @@ telegram_schedule_bot: CMakeFiles/telegram_schedule_bot.dir/rule
 # codegen rule for target.
 CMakeFiles/telegram_schedule_bot.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/telegram_schedule_bot.dir/build.make CMakeFiles/telegram_schedule_bot.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/dalerimatsoev/TgBot/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target telegram_schedule_bot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/dalerimatsoev/tgbot/build/CMakeFiles --progress-num=1,2 "Finished codegen for target telegram_schedule_bot"
 .PHONY : CMakeFiles/telegram_schedule_bot.dir/codegen
 
 # clean rule for target.

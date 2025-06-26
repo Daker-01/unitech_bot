@@ -8,8 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/dalerimatsoev/TgBot/main.cpp" "CMakeFiles/telegram_schedule_bot.dir/main.cpp.o" "gcc" "CMakeFiles/telegram_schedule_bot.dir/main.cpp.o.d"
-  "/Users/dalerimatsoev/TgBot/utils/schedule_updater.cpp" "CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.o" "gcc" "CMakeFiles/telegram_schedule_bot.dir/utils/schedule_updater.cpp.o.d"
+  "/Users/dalerimatsoev/tgbot/main.cpp" "CMakeFiles/telegram_schedule_bot.dir/main.cpp.o" "gcc" "CMakeFiles/telegram_schedule_bot.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
