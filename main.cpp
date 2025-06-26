@@ -46,11 +46,45 @@ bool isGroupAvailable(const std::string& group) {
 std::string getScheduleForGroup(const std::string& group) {
     std::ifstream in("../data/schedule.json");
     if (!in.is_open()) return "Ошибка: файл расписания не найден.";
-    json schedule; in >> schedule;
+    
+    nlohmann::ordered_json schedule;
+    in >> schedule;
+    
     if (!schedule.contains(group)) return "Расписание для группы не найдено.";
-    std::string res = "Расписание для группы " + group + ":\n";
-    for (auto& [day, val] : schedule[group].items())
-        res += day + ": " + val.get<std::string>() + "\n";
+    
+    std::string res = "Расписание для группы " + group + "\n\n";
+    
+    for (auto& [day, val] : schedule[group].items()) {
+        res += day + ":\n";
+        
+        std::string subjects = val.get<std::string>();
+        size_t start = 0;
+        size_t end = subjects.find(',');
+        
+        while (end != std::string::npos) {
+            std::string subject = subjects.substr(start, end - start);
+            
+            subject.erase(0, subject.find_first_not_of(' '));
+            subject.erase(subject.find_last_not_of(' ') + 1);
+            
+            if (!subject.empty()) {
+                res += "  • " + subject + "\n";
+            }
+            
+            start = end + 1;
+            end = subjects.find(',', start);
+        }
+        
+        std::string lastSubject = subjects.substr(start);
+        lastSubject.erase(0, lastSubject.find_first_not_of(' '));
+        lastSubject.erase(lastSubject.find_last_not_of(' ') + 1);
+        
+        if (!lastSubject.empty()) {
+            res += "  • " + lastSubject + "\n";
+        }
+        
+        res += "\n";
+    }
     return res;
 }
 
@@ -78,13 +112,16 @@ int main() {
         }
 
         if (text == "/start") {
-            if (userGroups.count(chatId))
-                bot.getApi().sendMessage(chatId, "Вы уже зарегистрированы в группе: " + userGroups[chatId]);
-            else {
+            if (userGroups.count(chatId)) {
+                bot.getApi().sendMessage(chatId, "Вы уже зарегистрированы в группе: " + userGroups[chatId] + 
+                                          "\nИспользуйте команды:\n/schedule - Показать расписание\n"
+                                         "/groups - Список групп\n"
+                                          "/changegroup - Сменить группу");
+            } else {
                 bot.getApi().sendMessage(chatId, "Введите название вашей группы:");
                 waitingForGroup[chatId] = true;
             }
-        } else if (text == "/group") {
+        } else if (text == "/changegroup" || text == "/group") {
             bot.getApi().sendMessage(chatId, "Введите новую группу:");
             waitingForGroup[chatId] = true;
         } else if (text == "/schedule") {
@@ -94,15 +131,19 @@ int main() {
             }
             bot.getApi().sendMessage(chatId, getScheduleForGroup(userGroups[chatId]));
         } else if (text == "/groups") {
-            if (availableGroups.empty())
+            if (availableGroups.empty()) {
                 bot.getApi().sendMessage(chatId, "Список групп пока недоступен.");
-            else {
+            } else {
                 std::string list = "Доступные группы:\n";
-                for (auto& g : availableGroups) list += g + "\n";
+                for (auto& g : availableGroups) list += "• " + g + "\n";
                 bot.getApi().sendMessage(chatId, list);
             }
         } else {
-            bot.getApi().sendMessage(chatId, "Неизвестная команда. Используйте /schedule, /group или /groups.");
+            bot.getApi().sendMessage(chatId, "Неизвестная команда. Используйте:\n"
+                                     "/start - Начать работу\n"
+                                     "/schedule - Показать расписание\n"
+                                     "/groups - Список групп\n"
+                                    "/changegroup - Сменить группу");
         }
     });
 
